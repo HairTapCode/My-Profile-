@@ -84,6 +84,35 @@
 
   <script src="script.js"></script>
 
-</body>
+<head>
+    <meta charset="UTF-8">
+      <title>Trang có đồng hồ</title>
+        <style>
+            #clock {
+                  font-size: 24px;
+                        font-weight: bold;
+                              padding: 10px;
+                                    background: #fffff1;
+                                          color: #00ffff;
+                                                width: fit-content;
+                                                      border-radius: 8px;
+                                                            margin: 10px auto;
+                                                                }
+                                                                  </style>
+                                                                  </head>
+                                                                  <body>
+                                                                    <!-- Đồng hồ ở đầu trang -->
+                                                                      <div id="clock">Đang tải giờ...</div>
 
-</html> 
+                                                                        <!-- Script cập nhật giờ -->
+                                                                          <script>
+                                                                              function updateClock() {
+                                                                                    const now = new Date();
+                                                                                          const time = now.toLocaleTimeString();
+                                                                                                document.getElementById("clock").innerText = "Giờ hiện tại là: " + time;
+                                                                                                    }
+                                                                                                        setInterval(updateClock, 1000);
+                                                                                                            updateClock(); // gọi ngay khi vừa load
+                                                                                                              </script>
+                                                                                                              </body>
+                                                                                                              </html>
